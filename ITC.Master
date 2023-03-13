@@ -1,0 +1,447 @@
+﻿
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="ITC.Master.cs" Inherits="ITCPortal.ITC" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <link href="css/adminlte.min.css" rel="stylesheet" />
+    <link href="css/all.min.css" rel="stylesheet" /
+    <link href="css/daterangepicker.css" rel="stylesheet" />
+    <link href="css/ionicons.min.css" rel="stylesheet" />
+    <link href="css/OverlayScrollbars.min.css" rel="stylesheet" />
+    <link href="css/icheck-bootstrap.css" rel="stylesheet" />
+    <link href="css/icheck-bootstrap.min.css" rel="stylesheet" />
+    <link href="css/sweetalert2.min.css" rel="stylesheet" />
+    <link href="css/jquery-ui.css" rel="stylesheet" />
+    <link href="css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+    <link href="css/select2-bootstrap4.min.css" rel="stylesheet" />
+    <link href="css/select2.min.css" rel="stylesheet" />
+    <link href="css/style.min.new.css" rel="stylesheet" />
+    <link href="css/bootstrap-duallistbox.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+
+
+
+
+     <!-- Custom CSS -->
+ <%--   <link href="css/style.min.css" rel="stylesheet" />
+    <link href="css/c3.min.css" rel="stylesheet" />
+    <link href="css/css-chart.css" rel="stylesheet" />
+    <link href="css/jquery-jvectormap-2.0.2.css" rel="stylesheet" />
+    <link href="css/jquery-ui.css" rel="stylesheet" />
+    <link href="css/morris.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="css/summernote-bs4.css"/>
+    <link rel="stylesheet" type="text/css" href="css/select2.min.css"/>
+    <link href="css/select2-bootstrap4.min.css" rel="stylesheet" />
+    <link href="css/sweetalert2.min.css" rel="stylesheet"/>--%>
+    <link href="css/bootstrap-duallistbox.min.css" rel="stylesheet" />
+
+    <!-- Custom js files -->
+
+    <script src="js/angular.min.js"></script>
+    <script src="js/jquery-latest.js"></script>
+    <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui-1.10.2.custom.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/xlsx.core.min.js"></script>
+    <script src="js/xls.core.min.js"></script>
+    <script src="js/raphael.min.js"></script>
+    <script src="js/morris.min.js"></script>
+    <script src="js/css3clock.js"></script>
+<%--    <script src="js/summernote-bs4.min.js"></script>--%>
+    <%--<script src='js/scrollreveal.min.js'></script>--%>
+    <script src="js/jquery.bootstrap-duallistbox.min.js"></script>
+    <script src="js/sweetalert2.all.min.js"></script>
+    <script src="js/ITCMaster.js"></script>
+
+
+
+
+
+
+
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <!--Internal Style Sheet Starts-->
+  
+
+
+
+
+    <style>
+        #id1 {
+        }
+
+        .daily-icon {
+            background-image: url(img/portfolio.png);
+            height: 24px;
+            width: 24px;
+            display: inline-block;
+        }
+
+        .dash-txt {
+            padding: 0px 12px;
+        }
+
+        .sidebar-dark-primary .nav-sidebar > .nav-item > .nav-link.active, .sidebar-light-primary .nav-sidebar > .nav-item > .nav-link.active {
+            background-color: #007bff;
+            color: #fff;
+            vertical-align: middle !important;
+            display: inline-flex !important;
+            width: 100% !important;
+            padding: 14px 24px !important;
+        }
+
+        .dash-icon {
+            background-image: url(img/dashboard.png);
+            height: 24px;
+            width: 24px;
+            display: inline-block;
+        }
+
+
+        .profile-btn {
+            font-size: 1rem;
+            color: #1f2d3d;
+            text-align: left;
+            font-weight: 700;
+            background: none;
+            border: none;
+        }
+
+
+        img.iconss {
+            width: 26px;
+        }
+
+        .select2-container--default .select2-selection--multiple .select2-selection__choice {
+            background-color: #5897fb !important;
+            padding: 7px 12px !important;
+            color: #ffffff !important;
+        }
+
+        .select2-container--default .select2-selection--single .select2-selection__arrow {
+            top: 8px !important;
+        }
+
+        .select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
+            color: #ffffff !important;
+        }
+
+        .content-wrapper {
+            height: 100vh;
+        }
+
+        .profilesection {
+            display: inline-block;
+            text-align: right;
+            width: 100%;
+            padding: 0px 16px;
+        }
+
+        .profile-img {
+            display: inline-block;
+        }
+
+        img.iconss {
+            width: 26px;
+        }
+
+        .btns {
+            padding: 6px 0px;
+            margin: 0px;
+            font-weight: 400 !important;
+            color: #989898;
+        }
+
+        .myform {
+            background: #f2f4f6;
+            border: none;
+        }
+
+        .select2-container .select2-selection--single {
+            height: 40px !important;
+        }
+
+        .fa, .far, .fas {
+            font-family: "Font Awesome 5 Free";
+            font-size: large;
+        }
+    </style>
+
+    <!--Internal Style Sheet Starts-->
+</head>
+<body class="hold-transition sidebar-mini layout-fixed">
+
+
+    <!-- Site wrapper -->
+    <div class="wrapper">
+        <!-- Navbar -->
+        <nav class="main-header navbar navbar-expand new-top-bg">
+            <!-- Left navbar links -->
+            <%-- <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+                </li>
+            </ul> --%>
+
+            <!-- SEARCH FORM -->
+           <div class="col-md-10">
+                <form class="form-inline col-md-4">
+                    <%--<div class="input-group input-group-sm" style="width: 100%;">
+                        <input class="form-control form-control-navbar myform" type="search" placeholder="Search" aria-label="Search" id="txt_search" onchange="search_no()"/>
+                    </div> --%>
+
+                     
+                        <div class="input-group input-group-sm">
+                           
+                            <div class="input-group-append">
+                                <%-- <input class="form-control form-control-navbar"  style="width: 75%;"  type="search" placeholder="Search" aria-label="Search" id="txt_search" maxlength="10" onkeypress="return onlyNos(event,this);" onchange="mob_validation(event, this.id);">
+                                <button class="btn btn-navbar" type="submit" onclick = "search_no()">
+                                    <i class="fas fa-search"></i>
+                                </button>--%>
+                            </div>
+                        </div>
+                    
+
+
+                </form>
+            </div>
+
+         
+
+
+
+
+
+
+
+            <div class="col dropdown" style="width: 100%;">
+                <button class="profile-btn" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="float: left;">
+                    <%--<img src="img/profile-pic.svg" />--%>
+                    <asp:Image ID="Image1" runat="server"  ImageUrl="~/img/pro.png" Style="width: 32px;" />
+                    <span id="uname2" runat="server" class="head6 text-primary" style="font-size:14px;"></span>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="logout.aspx">Logout</a>
+                    <%--<a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>--%>
+                </div>
+            </div>
+
+
+        </nav>
+        <!-- /.navbar -->
+
+        <!-- Main Sidebar Container -->
+        <aside class="main-sidebar sidebar-dark-primary elevation-4">
+            <!-- Brand Logo -->
+            <a href="Index.aspx" class="brand-link">
+                <img src="img/manappuram-2.png" alt="AdminLTE Logo" class="brand-image" style="opacity: .8" />
+                <span class="brand-text font-weight-light" style="visibility: hidden;">AdminLTE 3</span>
+            </a>
+
+            <!-- Sidebar -->
+              <div class="sidebar">
+                <!-- Sidebar Menu -->
+                <nav class="mt-2">
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                        <li class="nav-item">
+                            <a href="Index.aspx" class="nav-link">
+                               <%-- <i class="nav-icon fas fa-th"></i>--%>
+                                <p>
+                                    Dashboard
+                                </p>
+                            </a>
+                        </li>
+
+      
+                         <li class="nav-item">
+                            <a href="CRC_Graph_Caller.aspx" class="nav-link">
+                            
+                                <p>
+                                   CRC Perfomance Dashboard
+                               
+                                </p>
+                            </a>
+                        </li>
+                         <li class="nav-item">
+                            <a href="caller_extension_updation.aspx" class="nav-link">
+                            
+                                <p>
+                                   Extension Updation
+                               
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="campagin_call_form.aspx" class="nav-link">
+                            
+                                <p>
+                                   OTHER CAMPAIGN
+                               
+                                </p>
+                            </a>
+                        </li>
+                          <li class="nav-item">
+                           <i class="bi bi-person-lines-fill"style="color:red"></i> <a href="QA_home.aspx" class="nav-link">
+                                <p>MY QA</p>
+                              </a>
+                        </li>
+                       
+                  
+                       
+                    </ul>
+                </nav>
+                <!-- /.sidebar-menu -->
+            </div>
+            <!-- /.sidebar -->
+        </aside>
+
+           </div>
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+    </asp:ContentPlaceHolder>
+    <%--     </div>
+    </form>--%>
+
+    <footer class="main-footer text-center">
+        Designed & Developed by Dotnet Wing.
+   
+    </footer>
+
+    <!-- Control Sidebar -->
+    <aside class="control-sidebar control-sidebar-dark">
+        <!-- Control sidebar content goes here -->
+    </aside>
+    <!-- /.control-sidebar -->
+
+
+    <!--</div>-->
+    <!-- ./wrapper -->
+    <script src="js/adminlte.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/demo.js"></script>
+<%--    <script src="js/jquery.min.js"></script>--%>
+    <script src="js/jquery.overlayScrollbars.min.js"></script>
+    <script src="js/select2.full.min.js"></script>
+    <script src="js/jquery.bootstrap-duallistbox.min.js"></script>
+    <script src="js/moment.min.js"></script>
+    <script src="js/jquery.inputmask.bundle.min.js"></script>
+    <script src="js/tempusdominus-bootstrap-4.min.js"></script>
+    <script src="js/bootstrap-switch.min.js"></script>
+    <script src="js/sweetalert2.all.min.js"></script>
+    <script src="Scripts/jquery-ui.js"></script>
+    
+
+    <%-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>--%>
+    <%--    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>--%>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+
+    <!-- Page script -->
+    <script>
+
+        $(function () {
+                    //Initialize Select2 Elements
+                    $('.select2').select2()
+
+                    //Initialize Select2 Elements
+                    $('.select2bs4').select2({
+                        theme: 'bootstrap4'
+                    })
+
+                    //Datemask dd/mm/yyyy
+                    $('#datemask').inputmask('dd/mm/yyyy', { 'placeholder': 'dd/mm/yyyy' })
+                    //Datemask2 mm/dd/yyyy
+                    $('#datemask2').inputmask('mm/dd/yyyy', { 'placeholder': 'mm/dd/yyyy' })
+                    //Money Euro
+                    $('[data-mask]').inputmask()
+
+                    //Date range picker
+                    $('#reservationdate').datetimepicker({
+                        format: 'L'
+                    });
+                    //Date range picker
+                    $('#reservation').daterangepicker()
+                    //Date range picker with time picker
+                    $('#reservationtime').daterangepicker({
+                        timePicker: true,
+                        timePickerIncrement: 30,
+                        locale: {
+                            format: 'MM/DD/YYYY hh:mm A'
+                        }
+                    })
+                    //Date range as a button
+
+
+                    //Timepicker
+                    $('#timepicker').datetimepicker({
+                        format: 'LT'
+                    })
+
+                    //Bootstrap Duallistbox
+                    $('.duallistbox').bootstrapDualListbox()
+
+                    //Colorpicker
+                    $('.my-colorpicker1').colorpicker()
+                    //color picker with addon
+                    $('.my-colorpicker2').colorpicker()
+
+                    $('.my-colorpicker2').on('colorpickerChange', function (event) {
+                        $('.my-colorpicker2 .fa-square').css('color', event.color.toString());
+                    });
+
+                    $("input[data-bootstrap-switch]").each(function () {
+                        $(this).bootstrapSwitch('state', $(this).prop('checked'));
+                    });
+
+                })
+            
+
+
+    </script >
+
+
+<%--     <!-- Bootstrap tether Core JavaScript -->
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- apps -->
+    <script src="js/app.min.js"></script>
+    <script src="js/app.init.light-sidebar.js"></script>
+    <!-- Theme settings -->
+    <script src="js/app-style-switcher.js"></script>
+    <!-- slimscrollbar scrollbar JavaScript -->
+    <script src="js/perfect-scrollbar.jquery.min.js"></script>
+    <script src="js/sparkline.js"></script>
+    <!--Wave Effects -->
+    <script src="js/waves.js"></script>
+    <!--Menu sidebar -->
+    <script src="js/sidebarmenu.js"></script>
+    <!--Custom JavaScript -->
+    <script src="js/custom.min.js"></script>
+    <!--This page JavaScript -->
+    <script src="js/d3.min.js"></script>
+    <script src="js/c3.min.js"></script>
+    <script src="js/Chart.min.js"></script>
+    <script src="js/gauge.min.js"></script>
+    <script src="js/excanvas.min.js"></script>
+    <script src="js/jquery.flot.js"></script>
+    <script src="js/jquery.flot.tooltip.min.js"></script>
+    <script src="js/jquery-jvectormap-2.0.2.min.js"></script>
+    <script src="js/jquery-jvectormap-world-mill-en.js"></script>
+    <script src="js/dashboard2.js"></script>
+    <script src="js/echarts/echarts-en.min.js"></script>
+    <script src="js/select2.full.min.js"></script>
+    <script src="js/select2.min.js"></script>
+    <script src="js/select2.init.js"></script>--%>
+
+
+    <input id="hdUserId" type="hidden" runat="server" />
+    <input id="hdBranchId" type="hidden" runat="server" />
+    <input id="hdFirmId" type="hidden" runat="server" />
+</body>
+
+
+</html>
